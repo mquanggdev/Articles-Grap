@@ -23,6 +23,16 @@ export const resolvers = {
         const newArticle = new Article(article);
         await newArticle.save();
         return newArticle;
-      }
+      },
+      deleteArticle : async (_ , args) => {
+        const {id} = args ;
+        await Article.updateOne({
+          _id : id
+        } , {
+          deleted : true ,
+          deletedAt : new Date()
+        })
+        return "Đã Xóa"
+      },
     }
   }
