@@ -9,7 +9,8 @@ export const typeDefsArticle = gql`
     category: Category
   }
   type Query {
-    getListArticle(sortKey:String , sortValue: String): [Article],
+    getListArticle(sortKey:String , sortValue: String , currentPage: Int = 1,
+      limitItems: Int = 10 ): [Article],
     getArticle(id: String): Article
   }
   input ArticleInput {
