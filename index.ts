@@ -16,6 +16,7 @@ const startServer = async () => {
     //Graphql
     const apolloServer = new ApolloServer({
         typeDefs: typeDefs, // thằng này định nghĩa kiểu dữ liệu
+        introspection: true, // thằng này gợi ý lên cả online
         resolvers: resolvers, // thằng này thì trả dữ liệu dựa trên key được định nghĩa ở typeDefs,
         context : (context) => {
             return context;
