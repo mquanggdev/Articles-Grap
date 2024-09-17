@@ -3,8 +3,8 @@ import env from "dotenv";
 import { ApolloServer } from "apollo-server-express";
 import { connect } from "./config/database";
 import { gql } from "apollo-server-express";
-import { typeDefs } from "./typedefs";
-import { resolvers } from "./resolvers";
+import { typeDefs } from "./typeDefs/index.typeDefs";
+import { resolvers } from "./resolvers/index.resolver";
 
 
 const startServer = async () => {
