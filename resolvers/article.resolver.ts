@@ -49,7 +49,7 @@ export const resolversArticle = {
           const article = await Article.findOne({
             _id: id,
             deleted: false
-          });
+          });;
     
           return article;
         },
